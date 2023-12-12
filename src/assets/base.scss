@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap');
+
+:root {
+    --text-color: #151d26;
+    --text-lighter-color: #34495e;
+    --primary-color: #ff0080;
+    --background-color: #ecf0f1;
+    --text-size: 16px;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
+* {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+    font-size: var(--text-size);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+}
+
+
+
+main {
+    padding: 48px;
+
+    @media (max-width: 700px) {
+        padding: 24px;
+    }
+}
+
+.primary-on-hover {
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.tooltip-enter-active,
+.tooltip-leave-active {
+    transition-delay: 150ms;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.tooltip-enter,
+.tooltip-leave-to {
+    opacity: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 500;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+}
